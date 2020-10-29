@@ -1,6 +1,6 @@
 # JMLVisual.
 Visualization Library for Machine Learning using Java.
-This Library is built upon another Library JfreeCharts which is a Java 2D charts Library. 
+This Library is built upon another open source Library JfreeCharts which is a Java 2D charts Library. 
 JMLVisual is easy to use just Like matplotlib in python, with just few lines of code user can Visualize the Data easily. 
 This Library is not just compatible with double[] array but also with Numerical Library Nd4j. Right now it is under Testing and Not ready to use.
 
