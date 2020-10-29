@@ -24,7 +24,7 @@ or to insert more details
             plotter.createXYChart(loadData.transpose(),"+");
             plotter.show();
 
-
+<img src="https://github.com/akshay-591/JMLVisual./blob/master/src/main/java/com/test/ML/Regression/scatt.png">
 
 To Plot more than one data on the single chart
 
@@ -38,3 +38,5 @@ To Plot more than one data on the single chart
             plotter.setMultiLegendsTitles("original","Prediction");
             plotter.createMultiDataset(list,"+","/");
             plotter.show();
+            
+<img src="https://github.com/akshay-591/JMLVisual./blob/master/src/main/java/com/test/ML/Regression/multi.png">
