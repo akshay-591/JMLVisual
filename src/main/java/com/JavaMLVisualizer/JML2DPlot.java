@@ -360,7 +360,7 @@ public class JML2DPlot {
      *This class initiate chart showing process.
      */
     public void show (){
-        new Plotter(this).frame(this.chart);
+        new Window().showFrame(this.chart);
     }
 
 
