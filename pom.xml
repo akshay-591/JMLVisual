@@ -5,8 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ML</groupId>
-    <artifactId>ML.Regression</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>ML.JVisual</artifactId>
+    <version>1.0-ALPHA</version>
+    <packaging>jar</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <dl4j-master.version>1.0.0-beta7</dl4j-master.version>
@@ -35,17 +48,6 @@
 
         </dependency>
 
-        <dependency>
-            <groupId>org.deeplearning4j</groupId>
-            <artifactId>deeplearning4j-utility-iterators</artifactId>
-            <version>${dl4j-master.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.deeplearning4j</groupId>
-            <artifactId>deeplearning4j-ui</artifactId>
-            <version>${dl4j-master.version}</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->
         <dependency>
         <groupId>org.jfree</groupId>
@@ -53,100 +55,4 @@
         <version>1.5.0</version>
     </dependency>
     </dependencies>
-
-    <!-- Maven Enforcer: Ensures user has an up to date version of Maven before building -->
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-enforcer-plugin</artifactId>
-                <version>1.0.1</version>
-                <executions>
-                    <execution>
-                        <id>enforce-default</id>
-                        <goals>
-                            <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                            <rules>
-                                <requireMavenVersion>
-                                    <version>[${maven.minimum.version},)</version>
-                                    <message>********** Minimum Maven Version is ${maven.minimum.version}. Please upgrade Maven before continuing (run "mvn --version" to check). **********</message>
-                                </requireMavenVersion>
-                            </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.lewisd</groupId>
-                <artifactId>lint-maven-plugin</artifactId>
-                <version>0.0.11</version>
-                <configuration>
-                    <failOnViolation>true</failOnViolation>
-                    <onlyRunRules>
-                        <rule>DuplicateDep</rule>
-                        <rule>RedundantPluginVersion</rule>
-                        <!-- Rules incompatible with Java 9
-                        <rule>VersionProp</rule>
-                        <rule>DotVersionProperty</rule> -->
-                    </onlyRunRules>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>pom-lint</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>com.lewisd</groupId>
-                                        <artifactId>lint-maven-plugin</artifactId>
-                                        <versionRange>[0.0.11,)</versionRange>
-                                        <goals>
-                                            <goal>check</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore/>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 </project>
