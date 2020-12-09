@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ML</groupId>
-    <artifactId>ML.JVisual</artifactId>
+    <groupId>com.JavaMLVisualizer</groupId>
+    <artifactId>JMLVisual</artifactId>
     <version>1.0-ALPHA</version>
     <packaging>jar</packaging>
     <build>
@@ -22,7 +22,6 @@
     </build>
 
     <properties>
-        <dl4j-master.version>1.0.0-beta7</dl4j-master.version>
         <!-- Change the nd4j.backend property to nd4j-cuda-X-platform to use CUDA GPUs -->
         <!-- <nd4j.backend>nd4j-cuda-10.2-platform</nd4j.backend> -->
         <nd4j-native.version>1.0.0-beta7</nd4j-native.version>
