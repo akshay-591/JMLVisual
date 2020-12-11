@@ -33,6 +33,7 @@ public class JML2DPlot {
      */
 
     String chartLabel = "";
+    String windowLabel = "";
     String xAxisLabel="";
     String yAxisLabel="";
     PlotOrientation orientation = PlotOrientation.VERTICAL;
@@ -49,7 +50,6 @@ public class JML2DPlot {
     public final static String orientationHorizontal = "Horizontal";
 
 
-
     /**
      * Set the Chart title by default it an empty string.
      *
@@ -58,6 +58,13 @@ public class JML2DPlot {
     public void setChartLabel(String chartLabel) {
         this.chartLabel = chartLabel;
     }
+
+    /**
+     * This Method is used to set up window Labels
+     * @param windowLabel is String
+     */
+
+    public void setWindowLabel(String windowLabel){this.windowLabel = windowLabel;}
 
     /**
      * Set the X AxisLabel by default it is an empty String.
@@ -360,7 +367,7 @@ public class JML2DPlot {
      *This class initiate chart showing process.
      */
     public void show (){
-        new Window().showFrame(this.chart);
+        new Window().showFrame(this.chart,this.windowLabel);
     }
 
 
