@@ -367,7 +367,7 @@ public class JML2DPlot {
      *This class initiate chart showing process.
      */
     public void show (){
-        new Window().showFrame(this.chart,this.windowLabel);
+        new Window(this.chart,this.windowLabel).showFrame();
     }
 
 
