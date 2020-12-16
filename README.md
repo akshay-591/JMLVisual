@@ -1,4 +1,4 @@
-# JMLVisual.
+# JMLVisual
 Visualization Library for Machine Learning using Java.
 This Library is built upon another open source Library JfreeCharts which is a Java 2D charts Library. 
 JMLVisual is easy to use just Like matplotlib in python, with just few lines of code user can Visualize the Data easily. 
@@ -24,7 +24,7 @@ or to insert more details
             plotter.createXYChart(loadData.transpose(),"+");
             plotter.show();
 
-<img src="https://github.com/akshay-591/JMLVisual./blob/master/src/main/java/com/test/ML/Regression/scatt.png">
+<img src=https://github.com/akshay-591/JMLVisual/blob/master/Pic/Screenshot%20from%202020-12-16%2018-11-42.png>
 
 To Plot more than one data on the single chart
 
@@ -39,4 +39,8 @@ To Plot more than one data on the single chart
             plotter.createMultiDataset(list,"+","/");
             plotter.show();
             
-<img src="https://github.com/akshay-591/JMLVisual./blob/master/src/main/java/com/test/ML/Regression/multi.png">
+<img src="https://github.com/akshay-591/JMLVisual/blob/master/Pic/Screenshot%20from%202020-12-16%2018-12-17.png">
+
+Also User Can Save Chart as Images in png format.
+
+<img src = "https://github.com/akshay-591/JMLVisual/blob/master/Pic/chart.png">
