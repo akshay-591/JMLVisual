@@ -19,6 +19,7 @@ import java.io.IOException;
  */
 public class ItemListeners extends Component implements ActionListener {
     private Visual chart;
+    private final String optionMessage = "File already Exists Do you Want Overwrite the File ?";
 
     public ItemListeners(Visual chart) {
         this.chart = chart;
@@ -44,14 +45,32 @@ public class ItemListeners extends Component implements ActionListener {
                 // Create File Chooser
                 JFileChooser fileChooser = new JFileChooser();
                 //set Default Name
-                fileChooser.setSelectedFile(new File("Chart.png"));
-
+                File img = new File("Chart.png");
+                fileChooser.setSelectedFile(img);
 
                 // Show Dialog box
                 int i = fileChooser.showSaveDialog(null);
 
                 if (i == JFileChooser.APPROVE_OPTION){ // if approve
-                 saveImage("png",fileChooser.getSelectedFile());
+                    //Check if file Name exists or not
+                    if(fileChooser.getSelectedFile().exists()){
+
+                        int returnValue =  JOptionPane.showConfirmDialog(this,optionMessage);
+                        // return Value Will be 0 if User will press Yes, 1 if user will press No and 2 if User will press Cancel.
+                        switch (returnValue){
+                            case 0:  saveImage("png",fileChooser.getSelectedFile());
+                                break;
+                            case 1:  //TODO
+                                break;
+                            case 2: // TODO
+                                break;
+                            default: // Do Nothing
+
+
+                        }
+                    }
+                    else {saveImage("png",fileChooser.getSelectedFile());}
+
                 }
 
                 break;
@@ -83,14 +102,5 @@ public class ItemListeners extends Component implements ActionListener {
 
     }
 
-    /**
-     * This Method will ask user to Change the Name of the File if its already Exist
-     * @return Name of the File selected by user as String
-     */
-    private String changeName(){
-        //TODO
-
-        return null;
-    }
 
 }
