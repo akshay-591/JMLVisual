@@ -1,15 +1,15 @@
-package Regression;
+package com.JavaMLVisualizer.Test.Regression;
 
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 
 /**
- * This Class Contain Methods for Calculating Cost/loss Function and Gradient Descent for Regression Models
+ * This Class Contain Methods for Calculating Cost/loss Function and Gradient Descent for com.JavaMLVisualizer.Test.Regression Models
  *
  *
  * @author Akshay Kumar on 29-07-2020 at 22:48
- * @package com.ML.Regression
- * @project ML_Linear Regression
+ * @package com.ML.com.JavaMLVisualizer.Test.Regression
+ * @project ML_Linear com.JavaMLVisualizer.Test.Regression
  *
  */
 public class Optimizer {
@@ -17,7 +17,7 @@ public class Optimizer {
     PredictionHypothesis prediction;
 
     /**
-     * This Method calculate the cost or error for Regression Model
+     * This Method calculate the cost or error for com.JavaMLVisualizer.Test.Regression Model
      *
      * @param x is the Input values and should be a object of INDArray class.Rows of the input should contain
      *          the example and columns should the features
@@ -48,7 +48,7 @@ public class Optimizer {
     }
 
     /**
-     * This method calculate the optimum weights or minimizes the cost/error for Regression model
+     * This method calculate the optimum weights or minimizes the cost/error for com.JavaMLVisualizer.Test.Regression model
      *
      * @param x is the Input values and should be a object of INDArray class.Rows of the input should contain
      *           the example and columns should the features

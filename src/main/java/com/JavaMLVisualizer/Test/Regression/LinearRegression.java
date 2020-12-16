@@ -1,6 +1,6 @@
-package Regression;
+package com.JavaMLVisualizer.Test.Regression;
 
-import com.JavaMLVisualizer.JML2DPlot;
+import com.JavaMLVisualizer.UI.JML2DPlot;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.indexing.NDArrayIndex;
@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 
 /**
- * Testing Linear Regression model Model Using Java
+ * Testing Linear com.JavaMLVisualizer.Test.Regression model Model Using Java
  *
  * @author Akshay Kumar on 29-07-2020 at 19:15
- * @package com.ML.Regression
- * @project ML_Linear Regression
+ * @package com.ML.com.JavaMLVisualizer.Test.Regression
+ * @project ML_Linear com.JavaMLVisualizer.Test.Regression
  */
 
 public class LinearRegression {

@@ -4,7 +4,7 @@ This Library is built upon another open source Library JfreeCharts which is a Ja
 JMLVisual is easy to use just Like matplotlib in python, with just few lines of code user can Visualize the Data easily. 
 This Library is not just compatible with double[] array but also with Numerical Library Nd4j. Right now it is under Testing and Not ready to use.
 
-For ex- to view scattered charts Just like in Regression..
+For ex- to view scattered charts Just like in com.JavaMLVisualizer.Test.Regression..
  
             JML2DPlot plotter = new JML2DPlot();
             plotter.createXYChart(loadData.transpose(),"+"); // using INDArrays object 
@@ -15,7 +15,7 @@ or to insert more details
 
 
            JML2DPlot plotter = new JML2DPlot();
-            plotter.setChartLabel("Regression");
+            plotter.setChartLabel("com.JavaMLVisualizer.Test.Regression");
             plotter.setxAxisLabel("Xlabel");
             plotter.setyAxisLabel("Ylabel");
             plotter.setLegend(true);
