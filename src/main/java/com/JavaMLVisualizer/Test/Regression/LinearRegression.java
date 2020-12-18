@@ -1,9 +1,10 @@
 package com.JavaMLVisualizer.Test.Regression;
 
-import com.JavaMLVisualizer.UI.JML2DPlot;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.indexing.NDArrayIndex;
+
+import com.JavaMLVisualizer.UI.JML2DPlot;
 
 import java.io.IOException;
 import java.util.ArrayList;

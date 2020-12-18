@@ -2,7 +2,7 @@ package com.JavaMLVisualizer.Window.controller;
 
 
 import com.JavaMLVisualizer.UI.Visual;
-
+import com.JavaMLVisualizer.Window.view.ChartWindow;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -13,15 +13,17 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * This class Contains Controller Structure of The GUI like Listeners, Image Processing Method.
+ * This class Contains Controller Structure of The GUI like Listeners for File Item, Image Processing Method.
  *
  * @author Akshay Kumar.
  */
-public class ItemListeners extends Component implements ActionListener {
+
+
+public class ItemListenersFile extends Component implements ActionListener {
     private Visual chart;
     private final String optionMessage = "File already Exists Do you Want Overwrite the File ?";
 
-    public ItemListeners(Visual chart) {
+    public ItemListenersFile(Visual chart) {
         this.chart = chart;
     }
 
@@ -35,11 +37,12 @@ public class ItemListeners extends Component implements ActionListener {
 
         //Creating Switch Case for Different Menu Items
         switch (event.getActionCommand()){
-            case "Save":
+            case ChartWindow.FILE_SAVE:
+
                 saveImage("png",new File("Chart.png"));
                 break;
 
-            case "SaveAs":
+            case ChartWindow.FILE_SAVE_AS:
                 //This Option Will Open the File Chooser Option and Let the user Select the filePath and format
 
                 // Create File Chooser
