@@ -18,14 +18,15 @@ import java.net.URISyntaxException;
 public class ItemListenersHelp implements ActionListener {
 
     private static final String ABout_US_URL = "https://github.com/akshay-591/JMLVisual/blob/master/README.md";
-    public ItemListenersHelp(){
+
+    public ItemListenersHelp() {
 
     }
 
     @Override
     public void actionPerformed(ActionEvent event) {
 
-        switch (event.getActionCommand()){
+        switch (event.getActionCommand()) {
             case ChartWindow.HELP_ABOUT_US:
                 //open the URL in Default web browser
                 Desktop desktop = Desktop.getDesktop();
@@ -37,12 +38,11 @@ public class ItemListenersHelp implements ActionListener {
                     //Pass the URI object to browser
                     desktop.browse(aboutUSURI);
 
-                } catch (URISyntaxException  | IOException e ) {
+                } catch (URISyntaxException | IOException e) {
                     e.printStackTrace();
                 }
                 break;
             case ChartWindow.HELP_VERSION:
-                //getVersion();
                 break;
             case ChartWindow.HELP_DEPENDENCY_NEEDED:
                 //TODO
@@ -52,19 +52,6 @@ public class ItemListenersHelp implements ActionListener {
 
         }
 
-
     }
-
-   /* private String getVersion() {
-
-        InternetAddress object = new InternetAddress();
-        Package objPackage = object.getClass().getPackage();
-        //examine the package object
-        String name = objPackage.getSpecificationTitle();
-        String version = objPackage.getSpecificationVersion();
-        //some jars may use 'Implementation Version' entries in the manifest instead
-        System.out.println("Package name: " + name);
-        System.out.println("Package version: " + version);
-    }*/
 }
 
