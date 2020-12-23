@@ -41,6 +41,26 @@ To Plot more than one data on the single chart
             
 <img src="https://github.com/akshay-591/JMLVisual/blob/master/Pic/Screenshot%20from%202020-12-16%2018-12-17.png">
 
-Also User Can Save Chart as Images in png format.
+Also User Can Save Chart as Images in png format by going to File--Save which will save the image in Local Dir or File--SaveAs which will save the image in user dir.
 
 <img src = "https://github.com/akshay-591/JMLVisual/blob/master/Pic/chart.png">
+
+Image View is added by using simple code user can show image or multiple Images.
+
+        JMLImage test2 = new JMLImage();
+        File file = new File("Data/rubiks_cube.jpg"); 
+
+        test2.setImage(file,file); // set Image or Images
+
+        test2.setImageWidth(300,300); // set Image widths 
+        test2.setImageHeights(400,400); // set Image heights
+
+        test2.setGapBetweenImages(100,100); // set the gap between the images from each other and from the origin.
+
+        test2.setInitialX(100); // Set the Origin X
+        test2.setInitialY(100); // set the Origin Y
+
+        test2.setWindowLabel("Testing"); // Window label
+        test2.showImage(); // show image
+        
+<img src = https://github.com/akshay-591/JMLVisual/blob/master/Data/Screenshot%20from%202020-12-23%2022-04-29.png>
