@@ -18,6 +18,8 @@ import java.awt.event.ActionListener;
     private Visual chart;
     private String windowLabel;
 
+
+
     // Menu name
     private static final String MENU_FILE = "File";
     private static final String MENU_EDIT = "Edit";
@@ -35,28 +37,46 @@ import java.awt.event.ActionListener;
         this.windowLabel = windowLabel;
         
         // Initialize window making process
-        this.showFrame();
+        this.createChartFrame();
     }
 
+    public ChartWindow (JPanel panel, String windowLabel){
+        this.windowLabel = windowLabel;
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                createWindow(panel);
+            }
+        });
 
+
+    }
     /**
      * This Method put the chart object in the chart panel and that panel in the Jframe.
      */
-    private void showFrame(){
+    private void createChartFrame(){
         JPanel newPanel = new ChartPanel(this.chart);
+        createWindow(newPanel);
+    }
 
+    /**
+     *This Method will create Window and its Component.
+     * @param panel JPanel object Which Contains the graphics Component
+     */
+    private void createWindow(JPanel panel){
+
+        // Create Menu Bar and its Item
         JMenuBar bar = createMenu();
 
         this.setLayout(new BorderLayout());
-
-        this.add("North", bar);
-        this.add("Center", newPanel);
+        this.add("North", bar); // add Menu Bar
+        this.add("Center", panel); // add JPanel
 
         this.pack();
         this.setTitle(this.windowLabel);
-        this.setVisible(true);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setVisible(true);
     }
 
     /**

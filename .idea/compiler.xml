@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JMLVisual" target="7" />
+      <module name="JMLVisual" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
