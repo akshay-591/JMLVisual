@@ -1,7 +1,7 @@
 package com.JavaMLVisualizer.Window.view;
 
 import com.JavaMLVisualizer.Window.controller.ItemListenersFile;
-import com.JavaMLVisualizer.UI.Visual;
+import com.JavaMLVisualizer.UI.Frontend.Visual;
 import com.JavaMLVisualizer.Window.controller.ItemListenersHelp;
 import org.jfree.chart.ChartPanel;
 import javax.swing.*;

@@ -1,6 +1,6 @@
 package NormalTest;
 
-import com.JavaMLVisualizer.UI.JML2DPlot;
+import com.JavaMLVisualizer.UI.Frontend.JML2DPlot;
 import org.nd4j.linalg.api.ndarray.INDArray;
 
 import org.nd4j.linalg.factory.Nd4j;

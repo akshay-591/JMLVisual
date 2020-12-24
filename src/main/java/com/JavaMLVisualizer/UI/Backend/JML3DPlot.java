@@ -1,4 +1,4 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Backend;
 
 /**
  * This class contain 3D plots

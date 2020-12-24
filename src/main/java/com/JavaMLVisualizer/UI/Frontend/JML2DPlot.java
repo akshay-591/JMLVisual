@@ -1,6 +1,8 @@
 
 
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Frontend;
+import com.JavaMLVisualizer.UI.Backend.IncorrectArrayRankException;
+import com.JavaMLVisualizer.UI.Backend.Plotter;
 import com.JavaMLVisualizer.Window.view.ChartWindow;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.DefaultXYDataset;
@@ -32,6 +34,9 @@ public class JML2DPlot {
      /*
     some Global Variable used by all the methods.
      */
+     //Constants for orientation
+     public final static String ORIENTATION_VERTICAL = "Vertical";
+     public final static String ORIENTATION_HORIZONTAL = "Horizontal";
 
     String chartLabel = "";
     String windowLabel = "";
@@ -46,9 +51,120 @@ public class JML2DPlot {
     boolean urls =false;
 
 
-    //Constants for orientation
-    public final static String orientationVertical = "Vertical";
-    public final static String orientationHorizontal = "Horizontal";
+
+
+    /**
+     * get X Axis minimum Value
+     * @return X minimum Value
+     */
+    public double getXMin() {
+        return xMin;
+    }
+
+    /**
+     * get X Axis max value
+     * @return x max value
+     */
+    public double getXMax() {
+        return xMax;
+    }
+
+    /**
+     * get Y Axis Minimum Value
+     * @return Y axis min Value
+     */
+    public double getYMin() {
+        return yMin;
+    }
+
+    /**
+     * get Y Axis Max Value
+     * @return max value
+     */
+    public double getYMax() {
+        return yMax;
+    }
+
+    /**
+     * get Chart Label
+     * @return label
+     */
+    public String getChartLabel() {
+        return chartLabel;
+    }
+
+    /**
+     * get X Axis Label
+     * @return label X axis
+     */
+    public String getXAxisLabel() {
+        return xAxisLabel;
+    }
+
+    /**
+     * get Y Axis Label
+     * @return label Y Axis
+     */
+
+    public String getYAxisLabel() {
+        return yAxisLabel;
+    }
+
+    /**
+     * get Chart Orientation
+     * @return chart orientation
+     */
+    public PlotOrientation getOrientation() {
+        return orientation;
+    }
+
+    /**
+     * get Legend Title
+     * @return title Legend
+     */
+    public String getLegendTitle() {
+        return legendTitle;
+    }
+
+    /**
+     * get Legends Titles
+     * @return tiles of Legends
+     */
+    public String[] getLegendsTitles() {
+        return legendsTitles;
+    }
+
+    /**
+     * return Legends Shape
+     * @return shape
+     */
+    public Shape getLegendShape() {
+        return legendShape;
+    }
+
+    /**
+     * get Legend state
+     * @return state of the Legend
+     */
+    public boolean isLegend() {
+        return legend;
+    }
+
+    /**
+     * return ToolTips state
+     * @return ToolTips State
+     */
+    public boolean isTooltips() {
+        return tooltips;
+    }
+
+    /**
+     * get Urls State
+     * @return Urls state
+     */
+    public boolean isUrls() {
+        return urls;
+    }
 
 
     /**
@@ -163,11 +279,11 @@ public class JML2DPlot {
      */
     public void setOrientation (String orientation){
         switch (orientation){
-            case orientationVertical:
+            case ORIENTATION_VERTICAL:
                 this.orientation = PlotOrientation.VERTICAL;
                 break;
 
-            case orientationHorizontal:
+            case ORIENTATION_HORIZONTAL:
                 this.orientation = PlotOrientation.HORIZONTAL;
                 break;
 

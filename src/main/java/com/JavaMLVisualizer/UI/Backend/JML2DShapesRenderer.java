@@ -1,5 +1,6 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Backend;
 
+import com.JavaMLVisualizer.UI.Backend.JML2DShapes;
 import org.jfree.chart.LegendItem;
 import org.jfree.chart.renderer.xy.XYShapeRenderer;
 import org.jfree.chart.util.ShapeUtils;

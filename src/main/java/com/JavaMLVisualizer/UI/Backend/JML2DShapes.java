@@ -1,4 +1,4 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Backend;
 
 /**
  * This class contains the constant for Shapes and Methods for modifying colours and shapes.

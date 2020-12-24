@@ -1,5 +1,7 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Backend;
 
+import com.JavaMLVisualizer.UI.Frontend.JML2DPlot;
+import com.JavaMLVisualizer.UI.Frontend.Visual;
 import org.jfree.chart.*;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.ValueAxis;
@@ -21,12 +23,12 @@ import java.util.ArrayList;
  * @package com.JavaMLVisualizer
  * @project ML_Linear com.JavaMLVisualizer.Test.Regression
  **/
-class Plotter {
+public class Plotter {
 
     private JML2DPlot jmlPlot;
 
     //Constructor
-    Plotter(JML2DPlot plot) {
+    public Plotter(JML2DPlot plot) {
         this.jmlPlot = plot;
 
     }
@@ -44,7 +46,7 @@ class Plotter {
      * @return Return Visual object which is a subclass of jfree chart
      */
 
-    Visual combinedCharts(ArrayList<DefaultXYDataset> xylist, String[] shapes, float[] lengths, float[] widths, Color... colors) {
+    public Visual combinedCharts(ArrayList<DefaultXYDataset> xylist, String[] shapes, float[] lengths, float[] widths, Color... colors) {
         String shape;
         float len;
         float wid;
@@ -58,20 +60,20 @@ class Plotter {
         DefaultXYDataset defaultXYDataset;
 
         //Creating domain and range Axis by default they are Number Axis.
-        ValueAxis domain1 = new NumberAxis(jmlPlot.xAxisLabel);
-        ValueAxis range1 = new NumberAxis(jmlPlot.yAxisLabel);
+        ValueAxis domain1 = new NumberAxis(jmlPlot.getXAxisLabel());
+        ValueAxis range1 = new NumberAxis(jmlPlot.getYAxisLabel());
 
         //checking minimum and maximum range
 
 
 
-        if (jmlPlot.xMin != 0 && jmlPlot.xMax != 0) {
-            domain1.setRange(jmlPlot.xMin, jmlPlot.xMax);
+        if (jmlPlot.getXMin() != 0 && jmlPlot.getXMax() != 0) {
+            domain1.setRange(jmlPlot.getXMin(), jmlPlot.getXMin());
         } else {
             domain1.setAutoRange(true);
         }
-        if (jmlPlot.yMin != 0 && jmlPlot.yMin != 0) {
-            range1.setRange(jmlPlot.yMin, jmlPlot.yMax);
+        if (jmlPlot.getYMin() != 0 && jmlPlot.getYMax() != 0) {
+            range1.setRange(jmlPlot.getYMin(), jmlPlot.getYMax());
         } else {
             range1.setAutoRange(true);
         }
@@ -142,8 +144,8 @@ class Plotter {
 
         }
 
-        plot.setOrientation(jmlPlot.orientation);
-        Visual visual = new Visual(jmlPlot.chartLabel, JFreeChart.DEFAULT_TITLE_FONT, plot, jmlPlot.legend);
+        plot.setOrientation(jmlPlot.getOrientation());
+        Visual visual = new Visual(jmlPlot.getChartLabel(), JFreeChart.DEFAULT_TITLE_FONT, plot, jmlPlot.isLegend());
         visual.setBackgroundPaint(Color.WHITE);
         visual.getRenderingHints().put(Visual.KEY_SUPPRESS_SHADOW_GENERATION, true);
 
@@ -170,7 +172,7 @@ class Plotter {
         renderer.setWantedShape(shape, length, width);
         //setting color if any passed other wise null will be passed
         renderer.setWantedShapeColor(color);
-        renderer.setWantedLegendShape(jmlPlot.legendShape);
+        renderer.setWantedLegendShape(jmlPlot.getLegendShape());
 
         //feeding Dataset in plot
         plot.setDataset(index, set);

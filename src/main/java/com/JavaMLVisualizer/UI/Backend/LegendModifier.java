@@ -1,4 +1,4 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Backend;
 import org.jfree.chart.LegendItem;
 import java.awt.*;
 import java.text.AttributedString;

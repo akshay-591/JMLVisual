@@ -1,5 +1,6 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Frontend;
 
+import com.JavaMLVisualizer.UI.Frontend.JML2DPlot;
 import org.jfree.data.xy.DefaultXYDataset;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Backend;
 
 import java.io.IOException;
 

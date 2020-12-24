@@ -1,7 +1,7 @@
 package com.JavaMLVisualizer.Window.controller;
 
 
-import com.JavaMLVisualizer.UI.Visual;
+import com.JavaMLVisualizer.UI.Frontend.Visual;
 import com.JavaMLVisualizer.Window.view.ChartWindow;
 import javax.imageio.ImageIO;
 import javax.swing.*;

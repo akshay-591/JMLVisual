@@ -1,4 +1,4 @@
-package com.JavaMLVisualizer.UI;
+package com.JavaMLVisualizer.UI.Frontend;
 
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.Plot;
