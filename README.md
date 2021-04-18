@@ -24,7 +24,7 @@ or to insert more details
             plotter.createXYChart(loadData.transpose(),"+");
             plotter.show();
 
-<img src=https://github.com/akshay-591/JMLVisual/blob/master/Pic/Screenshot%20from%202020-12-16%2018-11-42.png>
+<img src="https://github.com/akshay-591/JMLVisual/blob/master/Pic/Screenshot%20from%202020-12-16%2018-11-42.png">
 
 To Plot more than one data on the single chart
 
@@ -63,4 +63,4 @@ Image View is added by using simple code user can show image or multiple Images.
         test2.setWindowLabel("Testing"); // Window label
         test2.showImage(); // show image
         
-<img src = https://github.com/akshay-591/JMLVisual/blob/master/Data/Screenshot%20from%202020-12-23%2022-04-29.png>
+<img src = "https://github.com/akshay-591/JMLVisual/blob/master/Data/Screenshot%20from%202020-12-23%2022-04-29.png">
